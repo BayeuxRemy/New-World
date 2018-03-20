@@ -1,0 +1,683 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title> NewWorld ~ by gthom</title>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+	<link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+		<!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- NEWWORLD Style-->
+    <link href="styles/newWorld.css" rel="stylesheet">
+    <!-- Template styles -->
+    <style rel="stylesheet">
+        /* TEMPLATE STYLES */
+        main {
+            padding-top: 3rem;
+            padding-bottom: 2rem;
+        }
+        .widget-wrapper {
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #e0e0e0;
+            margin-bottom: 2rem;
+        }
+        .navbar {
+            background-color: #53463d;
+        }
+        footer.page-footer {
+            background-color: #53463d;
+            margin-top: 2rem;
+        }
+        /* Carousel*/
+        .carousel {
+            height: 50%;
+        }
+        @media (max-width: 776px) {
+            .carousel {
+                height: 100%;
+            }
+        }
+        .carousel-item,
+        .active {
+            height: 100%;
+        }
+        .carousel-inner {
+            height: 100%;
+        }
+    </style>
+	</head>
+	<body>
+		<header>	
+					 <!--Navbar-->
+        <nav class="navbar navbar-toggleable-md navbar-dark">
+            <div class="container">
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav1" aria-controls="navbarNav1" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>    
+                <a class="navbar-brand" href="index.php">
+                    <strong>NW</strong>
+                </a>    
+                <div class="collapse navbar-collapse" id="navbarNav1">
+                    <ul class="navbar-nav mr-auto">
+                        <!--
+                        <li>
+                            <div class="logo-wrapper waves-light">
+                                <a href="index.php"  class="waves-effect waves-light logo-wrapper"> <img id="NewWorld-logo" src="images/logoNW.png" class="img-fluid flex-center" alt="NW Logo"></a>
+                            </div>
+                        </li>
+                        -->
+                        <li class="nav-item active">
+                            <a class="nav-link" href="acheterNW.php">Acheter <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="produireNW.php">Produire</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="distribuerNW.php">Distribuer</a>
+                        </li>
+                                                    <li class="nav-item ">
+                                                                <a href="#modal_login" id="show_login" class="nav-link" data-toggle="modal" data-target="#modal_login"><i class="fa fa-sign-in" ></i>Connexion
+                                </a>
+                            </li>
+                                                </ul>
+                    <form id="zoneRecherche" id="fRecherche" name="formRecherche" method="POST" action="rechercherNW.php" name="motRecherche" class="form-inline waves-effect waves-light">
+                        <input class="form-control" type="text" placeholder="Rechercher">
+                    </form>
+                </div>
+            </div>
+        </nav>
+<!--/.Navbar-->
+        </header>
+        <main>
+            <!--Carousel Wrapper-->
+    <div id="carousel-example-3" class="carousel slide carousel-fade white-text" data-ride="carousel" data-interval="false" style="height:200px;">
+        <!--Indicators-->
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-example-3" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-3" data-slide-to="1"></li>
+            <li data-target="#carousel-example-3" data-slide-to="2"></li>
+        </ol>
+        <!--/.Indicators-->
+
+        <!--Slides-->
+        <div class="carousel-inner" role="listbox">
+
+            <!-- First slide -->
+            <div class="carousel-item active view hm-black-light" style="background-image: url('images/repas.jpg'); background-repeat: no-repeat; background-size: cover;">
+                
+                <!-- Caption -->
+                <div class="full-bg-img flex-center white-text">
+                    <ul class="animated fadeInUp col-md-12">
+                        <li>
+                            <h1 class="h1-responsive">Eco Consommateur responsable</h1></li>
+                        <li>
+                            <p>Pensez à vos enfants, à vous et à la planète!</p>
+                        </li>
+                        <li>
+                            <a target="_blank" href="consommerNW.php" class="btn btn-info btn-lg">Plus d'info!</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.Caption -->
+                
+            </div>
+            <!--/.First slide-->
+
+            <!-- Second slide -->
+            <div class="carousel-item view hm-black-light" style="background-image: url('images/jardinier-a-larrosoir.jpg'); background-repeat: no-repeat; background-size: cover;">
+                
+                <!-- Caption -->
+                <div class="full-bg-img flex-center white-text">
+                    <ul class="animated fadeInUp col-md-12">
+                        <li>
+                            <h1 class="h1-responsive">Producteur et vivre de son travail</h1>
+                        </li>
+                        <li>
+                            <p>Ecoulez vos produits quand ils sont prêts et au juste prix!</p>
+                        </li>
+                        <li>
+                            <a target="_blank" href="produire.php" class="btn btn-info btn-lg">Plus d'info</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.Caption -->
+                
+            </div>
+            <!--/.Second slide -->
+
+            <!-- Third slide -->
+            <div class="carousel-item view hm-black-light" style="background-image: url('images/boucher.jpg'); background-repeat: no-repeat; background-size: cover;">
+                
+                <!-- Caption -->
+                <div class="full-bg-img flex-center white-text">
+                    <ul class="animated fadeInUp col-md-12">
+                        <li>
+                            <h1 class="h1-responsive">Artisans perpétuez votre activité!</h1></li>
+                        <li>
+                            <p>Pour que les villes ne meurent pas et que les grandes surfaces perdent leur monopole!</p>
+                        </li>
+                        <li>
+                            <a target="_blank" href="artisantsNW.php" class="btn btn-default btn-lg">Plus d'info</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.Caption -->
+                
+            </div>
+            <!--/.Third slide-->
+        </div>
+        <!--/.Slides-->
+
+        <!--Controls-->
+        <a class="carousel-control-prev" href="#carousel-example-3" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Précédent</span>
+        </a>
+        <a class="carousel-control-next" href="#carousel-example-3" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Suivant</span>
+        </a>
+        <!--/.Controls-->
+    </div>
+    <!--/.Carousel Wrapper-->                <!--Login Modal script -->
+<div id="fb-root"></div>
+<!-- chargement de la biblio fb d'identification -->
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.8&appId=586941824848574";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<script>
+  // This is called with the results from  FB.getLoginStatus().
+  function statusChangeCallback(response) 
+  {
+    console.log('statusChangeCallback');
+    console.log(response);
+    // The response object is returned with a status field that lets the
+    // app know the current login status of the person.
+    // Full docs on the response object can be found in the documentation
+    // for FB.getLoginStatus().
+    if (response.status === 'connected') {
+      // Logged into your app and Facebook.
+      testAPI();
+    } else {
+      // The person is not logged into your app or we are unable to tell
+      document.getElementById('status').innerHTML = 'Please log ' +
+        'into this app.';
+    }
+  }//fin du statusChangeCallback(response)
+
+  // This function is called when someone finishes with the Login
+  // Button.  See the onlogin handler attached to it in the sample
+  // code below.
+  function checkLoginState() {
+    FB.getLoginStatus(function(response) {
+      statusChangeCallback(response);
+    });
+  }
+
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '{your-app-id}',
+      cookie     : true,  // enable cookies to allow the server to access 
+                          // the session
+      xfbml      : true,  // parse social plugins on this page
+      version    : 'v2.8' // use graph api version 2.8
+    });
+
+    // Now that we've initialized the JavaScript SDK, we call 
+    // FB.getLoginStatus().  This function gets the state of the
+    // person visiting this page and can return one of three states to
+    // the callback you provide.  They can be:
+    //
+    // 1. Logged into your app ('connected')
+    // 2. Logged into Facebook, but not your app ('not_authorized')
+    // 3. Not logged into Facebook and can't tell if they are logged into
+    //    your app or not.
+    //
+    // These three cases are handled in the callback function.
+
+    FB.getLoginStatus(function(response) {
+      statusChangeCallback(response);
+    });
+
+  };//fin de la fonction window.fbAsyncInit
+  
+//ma fonction pour poster les données reçues de facebook
+  function postDonneesFB(idFB, mailFB)
+  { 
+    var request = $.ajax({
+    url: "http://gthom.btsinfogap.org/newWorld/traiteFormulaires.php",
+    method: "POST",
+    data: { idFacebook : idFB, mailFacebook : mailFB  }
+    });
+    request.done(function( msg ) 
+    {
+      console.log( msg );
+      //location="http://gthom.btsinfogap.org/newWorld/index.php";
+      //fermer la fenêtre modal_login en jquery
+      //$("#modal_login").close;//not function
+
+      $("#modal_login .close").click();
+      //window.referer.location="http://gthom.btsinfogap.org/newWorld/index.php";marche pas
+    });
+    request.fail(function( msg ) 
+    {
+      console.log("ident facebook erreur");
+      //location.reload();
+      //fermer la fenêtre modal_login en jquery marche pas
+      //$("#modal_login").close;
+    });
+  }//fin de la fonction postDonneesFB(idFB, mailFB)
+  // Here we run a very simple test of the Graph API after login is
+  // successful.  See statusChangeCallback() for when this call is made.
+  function testAPI() 
+  {
+    
+    FB.api('/me?fields=name,email,id', function(response) {
+      //traitement de la reponse
+      postDonneesFB(response.id,response.email );
+      //fin du traitement de la réponse
+    },{scope: 'email,public_profile'});
+  }//fin de la fonction testAPI()
+ 
+</script>
+<div class="modal fade modal-ext" id="modal_login" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form id="login" class="ajax-auth" action="" method="post">
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+
+                <div class="text-center">
+                    <h3 class="h3-responsive"><i class="fa fa-user"></i> S'authentifier avec: </h3>
+                   
+                    <!--
+                    	wsl_render_auth_widget
+                    	WordPress Social Login 2.3.0.
+                    	http://wordpress.org/plugins/wordpress-social-login/
+                    -->
+
+                    <style type="text/css">
+                    .wp-social-login-connect-with{}.wp-social-login-provider-list{}.wp-social-login-provider-list a{}.wp-social-login-provider-list img{}.wsl_connect_with_provider{}</style>
+
+                    <div class="wp-social-login-widget">
+
+                    	<div class="wp-social-login-connect-with">Se connecter avec:</div>
+
+                    	<div class="wp-social-login-provider-list">
+				<!--
+				<div class="fb-login-button" data-max-rows="1" data-size="medium" data-show-faces="true" data-auto-logout-link="false"></div>
+				-->
+                    		<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+</fb:login-button>
+                    		<a rel="nofollow" href="http://gthom.btsinfogap.org/newWorld//wp-login.php?action=wordpress_social_authenticate&#038;mode=login&#038;provider=Google&#038;redirect_to=http%3A%2F%2Fgthom.btsinfogap.org%2FnewWorld%2F" title="Connect with Google" class="wp-social-login-provider wp-social-login-provider-google" data-provider="Google">
+                    			<img alt="Google" title="Connect with Google" src="https://mdbootstrap.com/wp-content/plugins/wordpress-social-login/assets/img/32x32/wpzoom/google.png" />
+                    		</a>
+
+                    		<a rel="nofollow" href="http://gthom.btsinfogap.org/newWorld/wp-login.php?action=wordpress_social_authenticate&#038;mode=login&#038;provider=Twitter&#038;redirect_to=http%3A%2F%2Fgthom.btsinfogap.org%2FnewWorld%2F" title="Connect with Twitter" class="wp-social-login-provider wp-social-login-provider-twitter" data-provider="Twitter">
+                    			<img alt="Twitter" title="Connect with Twitter" src="https://mdbootstrap.com/wp-content/plugins/wordpress-social-login/assets/img/32x32/wpzoom/twitter.png" />
+                    		</a>
+
+                    	</div>
+
+                    	<div class="wp-social-login-widget-clearing"></div>
+
+                    </div>
+                    <!-- wsl_render_auth_widget -->
+                    <hr>
+                    <h3 class="h3-responsive"> Or:</h3>
+                    <p class="status"></p>
+                    <input type="hidden" id="security" name="security" value="aaeeddaed125" /><input type="hidden" name="_wp_http_referer" value="/" />
+                    <div class="md-form">
+                        <!--<label for="username">Votre identifiant</label>-->
+                        <i class="fa fa-user prefix"></i>
+                        <input type="text" id="username" class="form-control" name="username" placeholder="Identifiant">                
+                    </div>
+
+                    <div class="md-form">
+                        <i class="fa fa-lock prefix"></i>
+                        <input type="password" id="password" class="form-control" name="password" placeholder="Mot de passe">
+                        <!--<label for="password">Votre mot de passe</label>-->
+                    </div>
+
+                    <div class="text-center">
+                        <button class="submit_button btn btn-primary" type="submit" value="LOGIN">Se Connecter</button>
+                    </div>
+
+                    <hr>
+                    <div class="text-center">
+                        <p>Pas encore inscrit? <a href="#modal_register" id="pop_signup" data-toggle="modal" data-target="#modal_register">S'inscrire</a></p>
+                        <p> Mot de passe <a href="passwordPerduNW.php">oublié?</a></p>
+                    </div>
+                </div>
+                <!-- fin de la div textcenter -->
+            </form>
+            <!-- fin de la première fenêtre-->
+        </div>
+    </div>
+</div>
+            <!-- ouverture deuxième fenêtre -->
+<div class="modal fade modal-ext" id="modal_register" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form id="register" class="ajax-auth" action="inscriptionNW.php" method="post">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+
+                <div class="text-center">
+                    <h3 class="h3-responsive"><i class="fa fa-user"></i> Connexion</h3>       
+                    <!--
+                    	wsl_render_auth_widget
+                    	WordPress Social Login 2.3.0.
+                    	http://wordpress.org/plugins/wordpress-social-login/
+                    -->
+                    <style type="text/css">
+                    .wp-social-login-connect-with{}.wp-social-login-provider-list{}.wp-social-login-provider-list a{}.wp-social-login-provider-list img{}.wsl_connect_with_provider{}
+                    </style>
+                    <div class="wp-social-login-widget">
+
+                    	<div class="wp-social-login-connect-with">Se connecter avec:</div>
+
+                    	<div class="wp-social-login-provider-list">
+
+                    		<a rel="nofollow" href="http://gthom.btsinfogap.org/newWorld/wp-login.php?action=wordpress_social_authenticate&#038;mode=login&#038;provider=Facebook&#038;redirect_to=http%3A%2F%2Fgthom.btsinfogap.org%2FnewWorld%2F" title="Connecter avec Facebook" class="wp-social-login-provider wp-social-login-provider-facebook" data-provider="Facebook">
+                    			<img alt="Facebook" title="Connect with Facebook" src="images/facebook.png" />
+                    		</a>
+
+                    		<a rel="nofollow" href="http://gthom.btsinfogap.org/newWorld/wp-login.php?action=wordpress_social_authenticate&#038;mode=login&#038;provider=Google&#038;redirect_to=http%3A%2F%2Fgthom.btsinfogap.org%2FnewWorld%2F" title="Connect with Google" class="wp-social-login-provider wp-social-login-provider-google" data-provider="Google">
+                    			<img alt="Google" title="Connect with Google" src="images/google.png" />
+                    		</a>
+
+                    		<a rel="nofollow" href="http://gthom.btsinfogap.org/newWorld/wp-login.php?action=wordpress_social_authenticate&#038;mode=login&#038;provider=Twitter&#038;redirect_to=http%3A%2F%2Fgthom.btsinfogap.org%2FnewWorld%2F" title="Connect with Twitter" class="wp-social-login-provider wp-social-login-provider-twitter" data-provider="Twitter">
+                    			<img alt="Twitter" title="Connect with Twitter" src="images/twitter.png" />
+                    		</a>
+                    	</div>
+                    	<div class="wp-social-login-widget-clearing"></div>
+                    </div>
+                    <!-- wsl_render_auth_widget -->
+                    <hr>
+                    <h3 class="h3-responsive"> Ou:</h3>
+                </div>
+                <!-- fin du textcenter-->
+                <p class="status"></p>
+                <input type="hidden" id="signonsecurity" name="signonsecurity" value="256874042c" /><input type="hidden" name="_wp_http_referer" value="/" />
+                <div class="md-form">
+                    <i class="fa fa-user prefix"></i>
+                    <input type="text" id="signonname" class="form-control" name="nom">
+                    <label for="signonname">Votre nom :</label>
+                </div>
+                <div class="md-form">
+                    <i class="fa fa-user prefix"></i>
+                    <input type="text" id="signonpname" class="form-control" name="prenom">
+                    <label for="signonpname">Votre prénom :</label>
+                </div>
+                <div class="md-form">
+                    <i class="fa fa-envelope prefix"></i>
+                    <input type="email" id="email" class="form-control" name="email">
+                    <label for="email">Votre email :</label>
+                </div>
+
+                <div class="md-form">
+                    <i class="fa fa-lock prefix"></i>
+                    <input type="password" id="signonpassword" class="form-control" name="passwd1">
+                    <label for="signonpassword">Votre mot de passe :</label>
+                </div>
+
+                <div class="md-form">
+                    <i class="fa fa-lock prefix"></i>
+                    <input type="password" id="password2" class="form-control" name="passwd2">
+                    <label for="password2">Repetez le mot de passe</label>
+                </div>
+
+                <div class="text-center">
+                    <button class="submit_button btn btn-primary" type="submit" value="SIGNUP">S'inscrire</button>
+
+                    <hr>
+
+                    <p>Vous avez déjà un compte? <a href="#" id="pop_login">Se connecter</a></p>
+                </div>
+                    <!--
+                            <div class="g-recaptcha" data-sitekey="6LflIQ4TAAAAAEx83MeF_efgHI7acclgM_UYe1Ov"></div>
+                    -->
+            </form>
+        </div><!--.modal-content-->
+    </div><!-- .modal-document -->
+</div><!-- .modal_login -->
+<!-- chargement de jquery -->
+<!-- JQuery -->
+<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+<script>
+//rechargement de la page principale lors de la fermeture de la fenêtre de login
+  $('#modal_login').on('hidden.bs.modal', function () {
+    location.reload();
+  });
+</script>
+<br/>
+<div class="row">
+    <div id="gauche" class="col-lg-8">
+    	<div id="texteGauche" style="text-align:center; font-family: 'Great Vibes', cursive; font-size:1.5em;">
+    		<p>Les meilleurs produits de saison.</p>
+    		<p>Du producteur à l'artisan et au  consommateur</p>
+    		<p>Ni usine, ni camion, ni grande surface.</p>
+    		<p>La terre et l'homme  à nouveau respectés.</p>
+    		<p>New World</p>
+    	</div>
+    	<hr>
+    	<div class="row col-lg-12" id="complementTexteGauche">
+        	<!--carte producteur-->	
+        	<div class="card col-xs-12  default-color text-center  col-lg-3 ">
+        		<div class="card-header default-color-dark white-text">
+                  Producteur
+                </div>
+            	<div class="card-block">
+                	<h4 class="card-title">Agriculteurs, éleveurs</h4>
+                	<p class="white-text">Vous souhaitez proposer au juste prix des produits de qualité, sains, frais et de saison.</p>
+                	<a class="btn btn-default" href="inscriptionNW.php?role=producteur">S'inscrire</a>
+            	</div>
+            	<div class="card-footer text-muted default-color-dark white-text">
+                	<p>déjà 243 inscrits</p>
+            	</div>		
+            </div>
+        	<!--fin carte producteur-->
+        	<!--carte consommateur-->	
+        	<div class="card col-xs-12 card-info text-center  col-lg-4 offset-lg-1 offset-md-1">
+        		<div class="card-header default-color-dark white-text">
+                  Consommateur
+                </div>
+            	<div class="card-block">
+                	<h4 class="card-title">Adulte éco-responsable</h4>
+                	<p class="white-text">Vous êtes un père ou une mère de famille responsable qui sait non seulement que l'on doit manger sain mais aussi que pour maintenir un centre ville et des campagnes peuplés, il est nécessaire de donner 
+        			leurs chances aux producteurs et artisants.Les emplois que vous maintenez aujourd'hui seront peut-être ceux de vos enfants. Il faut développer l'activité locale en réduisant les coûts de transport ainsi que les intermédiaires.
+        			Vous souhaitez proposer au juste prix des produits de qualité, sains, frais et de saison.</p>
+                	<a class="btn btn-default" href="inscriptionNW.php?role=client">S'inscrire</a>
+            	</div>
+            	<div class="card-footer text-muted default-color-dark white-text">
+                	<p>déjà 5243 inscrits</p>
+            	</div>		
+            </div>
+        	<!--fin carte consommateur-->
+        	<!--carte pointDeVente-->	
+        	<div class="card col-xs-12 default-color text-center  col-lg-3 offset-lg-1 offset-md-1">
+        		<div class="card-header default-color-dark white-text">
+                  Artisans
+                </div>
+            	<div class="card-block">
+                	<h4 class="card-title">Artisan de l'alimentaire</h4>
+                	<p class="white-text">Vous transformez les produits frais locaux et souhaitez maintenir votre commerce de centre ville face à l'omniprésence des grandes surfaces. Vous voyez chaque jour autour de vous des magasins qui ferment. NewWorld peut vous permettre un complément d'activité. Tentez cela ne coûte rien.</p>
+                	<a class="btn btn-default" href="inscriptionNW.php?role=distributeur">S'inscrire</a>
+            	</div>
+            	<div class="card-footer text-muted default-color-dark white-text">
+                	<p>déjà 302 inscrits</p>
+            	</div>		
+            </div>
+        	<!--fin carte consommateur--> 		
+    	</div><!-- fin de la row des cartes -->
+    </div><!--fin de la div gauche -->
+    <div id="droite"class="col-lg-4" >
+    <!--Card-->
+    <div class="card">
+
+        <!--Card image-->
+        <img class="img-fluid" src="images/jardinier-a-larrosoir.jpg" alt="Maraicher">
+        <!--/.Card image-->
+
+        <!--Card content-->
+        <div class="card-block">
+            <!--Title-->
+            <h4 class="card-title">Paysans/Maraicher</h4>
+            <!--Text-->
+            <p class="card-text">En cultivant la Terre, ils la rendent plus propice à la vie.</p>
+        </div>
+        <!--/.Card content-->
+
+    </div>
+    <!--/.Card-->
+    <!--Card-->
+    <div class="card">
+
+        <!--Card image-->
+        <img class="img-fluid" src="images/boucher.jpg" alt="Artisans">
+        <!--/.Card image-->
+
+        <!--Card content-->
+        <div class="card-block">
+            <!--Title-->
+            <h4 class="card-title">Boucher, charcutier, boulanger</h4>
+            <!--Text-->
+            <p class="card-text">Ils transforment les produits locaux en respectant la charte et maintiennent les savoir faire et les centre villes vivants.</p>
+        </div>
+        <!--/.Card content-->
+
+    </div>
+    <!--/.Card--> 
+    <!--Card-->
+    <div class="card" max-with="610px">
+
+        <!--Card image-->
+        <img class="img-fluid" src="images/repas.jpg" alt="Hommes/femmes">
+        <!--/.Card image-->
+
+        <!--Card content-->
+        <div class="card-block">
+            <!--Title-->
+            <h4 class="card-title">Hommes/femmes</h4>
+            <!--Text-->
+            <p class="card-text">Eco consommateurs responsables, ils cuisinent des produits de saison, Ils rêvent d'une terre et d'hommes respectés.</p>
+        </div>
+        <!--/.Card content-->
+
+    </div>
+    <!--/.Card--> 	
+    	
+    </div><!-- fin de la div de droite -->
+</div> <!-- de la row -->
+
+    </main>
+
+    <!--Footer-->
+    <footer class="page-footer center">
+
+        <!--Footer Links-->
+        <div class="container-fluid">
+            <div class="row">
+
+                <!--Second column-->
+                <div class="col-lg-2 col-md-4 offset-md-2">
+                    <h5 class="title">Participer</h5>
+                    <ul>
+                        <li>Proposer des produits</li>
+					    <li>Transformer</li>
+					    <li>Devenir client</li>
+					    <li>Distribuer</li>
+                    </ul>
+                </div>
+                <!--/.Second column-->
+
+                <hr class="hidden-md-up">
+
+                <!--Third column-->
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="title">Comprendre</h5>
+                    <ul>
+                        <li>Savoir faire local</li>
+					<li>Réduire les transports</li>
+					<li>Produits frais</li>
+					<li>Qualité</li>
+                        
+                    </ul>
+                </div>
+                <!--/.Third column-->
+
+                <hr class="hidden-md-up">
+
+                <!--Fourth column-->
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="title">Communiquer</h5>
+                    <ul>
+                        <li>Les secrets des producteurs</li>
+					    <li>Le savoir faire des artisants</li>
+					    <li>Les recettes de grand-mère</li>
+					    <li>La conservation des aliments</li>    
+                    </ul>
+                </div>
+                <!--/.Fourth column-->
+
+            </div>
+        </div>
+        <!--/.Footer Links-->
+
+        <hr>
+        <!--Call to action-->
+        <div class="call-to-action">
+            <h4>Soyez acteur du changement.</h4>
+            <ul>
+                <li>
+                    <h5>Le futur c'est vous et maintenant.</h5></li>
+                <li><a target="_blank" href="inscriptionNW.php" class="btn btn-info">S'inscrire!</a></li>
+                <li><a target="_blank" href="consommerNW.php" class="btn btn-default">En savoir plus</a></li>
+            </ul>
+        </div>
+        <!--/.Call to action-->
+
+        <!--Copyright-->
+        <div class="footer-copyright">
+            <div class="container-fluid">
+                @copyright NW-2014 | <a href="contact.php">Nous contacter</a>|<a href="legalNotice.php">"mentions légales"</a>
+
+            </div>
+        </div>
+        <!--/.Copyright-->
+    
+    </footer>
+    <!--/.Footer-->
+
+
+    <!-- SCRIPTS -->
+
+    
+
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/tether.min.js"></script>
+
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+
+	</body>
+</html>
