@@ -1,17 +1,17 @@
 <?php
 session_start(); 
 
-	$user = "root";
-	$pwd = "";
+	$user = "rbayeux";
+	$pwd = "ini01";
 	$serveur = "localhost";
 	$base = "newWorld";
 
 	mysqli_connect($serveur, $user, $pwd);
-	//mysqli_select_db($base);
+	//mysql_select_db($base);
 	// connection à la base
 	if (!($cnx = mysqli_connect($serveur, $user, $pwd, $base))) 
 	{
-		echo ("connection impossible ".$cnx->connect_error);
+		echo ("connexion impossible ".$cnx->connect_error);
 		return false;
 	}
 		

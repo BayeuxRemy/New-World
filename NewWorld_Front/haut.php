@@ -102,13 +102,14 @@ include("connexionBase.php");
     <link href="css/myCss.css" rel="stylesheet">
 </head>
 
-<body> 
+<body>
+    
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar ">
             <div class="container">
-                <a class="navbar-brand" href="#">NW</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-brand" href="#">New World</span>
+                <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
-                </button>
+                </button>-->
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
@@ -116,33 +117,73 @@ include("connexionBase.php");
                             <?php 
                           if (isset($_SESSION['username']))
                           {
-                            $username=$_SESSION['username'];
                         ?>  
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Acheter</a>
+                            <a class="nav-link" href="achatNW.php">Acheter</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Produire</a>
+                            <a class="nav-link" href="prodNW.php">Produire</a>
                         </li>
                          <li class="nav-item">
                             <a class="nav-link" href="distribNW.php">Distribuer</a>
                         </li>
-                            <p class="nav-item ml-sm-5 text-white">Bievenu <?php echo $username ?></p>
+                            <p class="nav-item ml-sm-5 text-white">Bievenue <?php echo $_SESSION['username'] ?></p>
                          <li class="nav-item ml-sm-5">
                             <a href="deconnexionNW.php" class="nav-link"><i class="fa fa-sign-in"></i>Déconnexion</a>
+                        </li>
                         <?php
                           } else { 
                         ?>
-                        </li>
+                         <li class="nav-item">
                             <a href="#modal_login" id="show_login" class="nav-link" data-toggle="modal" data-target="#modal_login"><i class="fa fa-sign-in"></i>Connexion</a>
-                        <?php
-                          }
-                        ?>
                         </li>
                     </ul>
+                        <?php
+
+                    // Traitement du formulaire 
+                    if(isset($_REQUEST['login']))
+                    {
+                       $username = $_POST['username'];
+                       $password = $_POST['password'];
+                        // récupération du mot de passe utilisateur
+                       $txtReq="select password, idUser from utilisateur where username='".$username."'";
+                       $result = $cnx->query($txtReq);
+                                   
+                        if ($result=== false OR $result->num_rows<1) 
+                        {
+                            $message = 'Utilisateur inconnu';
+                        }
+                        else 
+                        {
+                            $ligne = $result->fetch_array();
+                            // comparaison des mots de passe
+                            if (password_verify($password, $ligne['password']))
+                            {
+                                // màj du username dans la session
+                                $_SESSION['username'] = $_POST['username'];
+                                $_SESSION['idUser'] = $ligne['idUser'];
+                                    
+                                 $message= 'Connexion réussie ';   
+
+                                header("Refresh:0; url=index.php");  
+                            }
+                            else
+                            {
+                                $message = 'Mot de passe érroné';
+                            }
+                        }
+                    }
+                    // affichage éventuel d'un message sil y a lieu
+                    if(isset($message)) 
+                    {
+                       echo '<div class="msg">'.$message.' </div>';
+                    }
+                }
+                ?>
+
                     <form class="form-inline">
-                        <i class="fa fa-search" style="color:white;"></i><input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                        <i class="fa fa-search ml-sm-5" style="color:white;"></i><input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
                     </form>
 
                 </div>
@@ -152,8 +193,7 @@ include("connexionBase.php");
 <div class="modal fade modal-ext" id="modal_login" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <form id="login" class="ajax-auth">
-
+            <form id="login" class="ajax-auth" method="POST">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>

@@ -13,8 +13,8 @@ include("connexionBase.php");
 */
 if(isset($_SESSION['username']))
 {
-  unset($_SESSION['username'], $_SESSION['userid']);
-  echo "<div>Vous avez été déconnecté</div>";
+  unset($_SESSION['username'], $_SESSION['idUser']);
+  echo "<div class=\"msg\">Vous avez été déconnecté</div>";
 }
 if(!(isset($_SESSION['username']))) {
  header('Location: index.php');
